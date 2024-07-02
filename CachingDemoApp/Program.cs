@@ -5,11 +5,10 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddSingleton<SomeBackendDataService>();
-builder.Services.AddStackExchangeRedisCache(setup =>
-{
-    setup.Configuration = "127.0.0.1:6379";
-});
-// builder.Services.AddMemoryCache();
+//builder.Services.AddStackExchangeRedisCache(setup =>
+//{
+//    setup.Configuration = "127.0.0.1:6379";
+//});
 // builder.Services.AddHybridCache();
 var app = builder.Build();
 

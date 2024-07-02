@@ -11,16 +11,17 @@ has:
 - an implementation with manual `IDistributedCache` usage
 - an implementation with `HybridCache` usage
 
-These methods are used from /CachingDemoApp/Views/Home/Index.cshtml
+These methods are used from `/CachingDemoApp/Views/Home/Index.cshtml`
 
-Configuration is in /CachingDemoApp/Program.cs
+Configuration is in `/CachingDemoApp/Program.cs`
 
-Package addition is in /CachingDemoApp/CachingDemoApp.csproj
+Package addition is in `/CachingDemoApp/CachingDemoApp.csproj`
 
 
 Key topics:
 
 - ease of use
 - stampede
+- L1/L2 differences
 - configuration
 - serialization

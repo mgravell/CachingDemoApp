@@ -12,7 +12,7 @@ namespace CachingDemoApp.Controllers
             var timer = Stopwatch.StartNew();
 
             var data = await backend.GetSomeExpensiveDataWithoutCacheAsync(cancellation);
-            //var data = await backend.GetSomeExpensiveDataWithoutCacheAsync(cancellation);
+            //var data = await backend.GetSomeExpensiveDataWithManualCachingAsync(cancellation);
             //var data = await backend.GetSomeExpensiveDataWithHybridCachingAsync(cancellation);
 
             timer.Stop();

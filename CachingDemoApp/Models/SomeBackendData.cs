@@ -1,6 +1,6 @@
-﻿using Microsoft.Extensions.Caching.Distributed;
-using Microsoft.Extensions.Caching.Hybrid;
-using System.Text.Json;
+﻿//using Microsoft.Extensions.Caching.Distributed;
+//using Microsoft.Extensions.Caching.Hybrid;
+//using System.Text.Json;
 
 namespace CachingDemoApp.Models
 {
@@ -36,7 +36,7 @@ namespace CachingDemoApp.Models
 
         //public async Task<SomeBackendData> GetSomeExpensiveDataWithManualCachingAsync(CancellationToken cancellationToken)
         //{
-        //    string key = "my expensive data key"; // could also include parameter values, i.e. $"/foos/{region}/{id}"
+        //    string key = "my expensive data key"; // could also include parameter values, i.e. $"/orders/{region}/{id}"
         //    var bytes = await distributedCache.GetAsync(key, cancellationToken);
         //    if (bytes is null)
         //    {
@@ -59,7 +59,8 @@ namespace CachingDemoApp.Models
         //}
 
         //// usually this would be longer; short timeout is so we can see it expire during execution
-        //private static readonly DistributedCacheEntryOptions DistributedCacheTimeout = new() { AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(15) };
+        //private static readonly DistributedCacheEntryOptions DistributedCacheTimeout = new() {
+        //    AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(15) };
 
         #endregion Manual caching
 
@@ -70,8 +71,11 @@ namespace CachingDemoApp.Models
         //            HybridCacheTimeout, token: cancellationToken);
 
         //// usually this would be longer; short timeout is so we can see it expire during execution
-        //private static readonly HybridCacheEntryOptions HybridCacheTimeout = new() {
-        //    Expiration = TimeSpan.FromSeconds(15), LocalCacheExpiration = TimeSpan.FromSeconds(15) };
+        //private static readonly HybridCacheEntryOptions HybridCacheTimeout = new()
+        //{
+        //    Expiration = TimeSpan.FromSeconds(15),
+        //    LocalCacheExpiration = TimeSpan.FromSeconds(15)
+        //};
 
         #endregion
     }
