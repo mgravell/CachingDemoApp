@@ -1,0 +1,12 @@
+﻿@model SomeBackendData
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Page generated: @ViewData["clock"]</p>
+    <p>Time taken: @(ViewData["timer"])ms</p>
+    <p>Underlying data generated: @Model.CreationTime</p>
+    <p>Underlying data unique id: @Model.Id</p>
+</div>
