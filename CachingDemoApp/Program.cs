@@ -22,10 +22,10 @@ builder.Services.AddHybridCache(options =>
 
 // CHANGE HERE to see the behaviour of different cache implementations
 builder.Services.AddSingleton<SomeBackendDataService>();
-//builder.Services.AddSingleton<SomeBackendDataService, WithMemoryCache>();
-//builder.Services.AddSingleton<SomeBackendDataService, WithDistributedCache>();
-//builder.Services.AddSingleton<SomeBackendDataService, WithHybridCache>();
-//builder.Services.AddSingleton<SomeBackendDataService, WithHybridCacheNoCapture>();
+// builder.Services.AddSingleton<SomeBackendDataService, WithMemoryCache>();
+// builder.Services.AddSingleton<SomeBackendDataService, WithDistributedCache>();
+// builder.Services.AddSingleton<SomeBackendDataService, WithHybridCache>();
+// builder.Services.AddSingleton<SomeBackendDataService, WithHybridCacheNoCapture>();
 
 var app = builder.Build();
 

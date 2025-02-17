@@ -11,6 +11,7 @@ public class WithHybridCacheNoCapture(HybridCache hybridCache)
         return await hybridCache.GetOrCreateAsync(
             $"/somepath/{id}", (id, obj: this),
             static (state, cancellation) => state.obj.UnderlyingDataFetchAsync(state.id, cancellation),
+            tags: Tags,
             cancellationToken: cancellationToken
         );
     }

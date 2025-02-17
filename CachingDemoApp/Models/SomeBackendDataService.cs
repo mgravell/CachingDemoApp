@@ -1,4 +1,6 @@
-﻿namespace CachingDemoApp.Models;
+﻿using System.Collections.Immutable;
+
+namespace CachingDemoApp.Models;
 
 public class SomeBackendData
 {
@@ -18,7 +20,7 @@ public class SomeBackendDataService
         // simulate an expensive fetch operation (in real code this code be database data, HTTP, gRPC, etc)
         _ = id;
         await Task.Delay(TimeSpan.FromMilliseconds(2500), cancellationToken);
-        
+
         // invent some data to return
         return new SomeBackendData
         {
@@ -29,4 +31,6 @@ public class SomeBackendDataService
     }
 
     internal static TimeSpan Expiration = TimeSpan.FromSeconds(7.5);
+
+    protected static ImmutableList<string> Tags { get; } = [ "general", "sales" ];
 }

@@ -11,6 +11,7 @@ public class WithHybridCache(HybridCache hybridCache)
         return await hybridCache.GetOrCreateAsync(
             $"/somepath/{id}",
             cancellation => UnderlyingDataFetchAsync(id, cancellation),
+            tags: Tags,
             cancellationToken: cancellationToken
         );
     }
